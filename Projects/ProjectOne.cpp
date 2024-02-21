@@ -32,8 +32,8 @@ int main()
 
     if (unit == 1)
     {
-        muzzle_velocity = muzzle_velocity * 0.3048;
-        target_distance = target_distance * 0.3048;
+        muzzle_velocity = muzzle_velocity / 3.28;
+        target_distance = target_distance / 3.28;
     }
 
 
@@ -55,7 +55,11 @@ int main()
 
         if(x_distance>max_distance)
         {
-            cout << "Your projectile will not make it to the target" << endl;
+            cout << "Your projectile will not make it to the target! " << endl;
+        }
+         else
+        {
+            cout << "Your projectile will make it to the target! " << endl;
         }
     }
     else if (unit == 1)
@@ -68,9 +72,14 @@ int main()
 
         if(x_distance>max_distance)
         {
-            cout << "Your projectile will not make it to the target" << endl;
+            cout << "Your projectile will not make it to the target! " << endl;
+        }
+        else
+        {
+            cout << "Your projectile will make it to the target! " << endl;
         }
     }
+    
 
     return 0;
 }
