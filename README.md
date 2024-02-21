@@ -33,3 +33,18 @@ ________________________________________________________________________________
 | Status: | Done|
 | Location: | https://github.com/nancy-heeney/CS1-nheeney/blob/main/Assignments/Labs/library.cpp |
 | Notes: | Done|
+
+
+_______________________________________________________________________________________________
+
+# HOMEWORKS
+
+## Project #1
+| Name | Value |
+| --- | --- |
+| Name: | Project 1 |
+| Description: | "CS111 Project 1" |
+| Due Date: | 2/21/24 |
+| Status: | Done|
+| Location: | https://github.com/nancy-heeney/CS1-nheeney/blob/main/Projects/ProjectOne.cpp |
+| Notes: | Done and I deserve a 100% |
