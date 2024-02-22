@@ -41,8 +41,8 @@ ________________________________________________________________________________
 | Description: | "Loops / shapes" |
 | Due Date: | 03/16/24 |
 | Status: | In Progress |
-| Location: | https://github.com/nancy-heeney/CS1-nheeney/blob/main/Assignments/Labs/library.cpp |
-| Notes: |  |
+| Location: | https://github.com/nancy-heeney/CS1-nheeney/blob/main/loops/shapes/main.cpp  |
+| Notes: | In Progress |
 
 
 _______________________________________________________________________________________________
