@@ -1,8 +1,8 @@
 /*
     Loops Lab
-    Updated By: Nancy Heeney
+    Updated By: FIXME1
     CSCI 111
-    Date: 22.02.2024
+    Date: FIXME2
 
     Program prints geometric shapes of given height with * using loops
 */
@@ -19,13 +19,10 @@ void printTriangle(int height) {
     //of that height with *
     int row = 1;
     // row
-    
     while (row <= height) {
         // column
         for(int col = 1; col<=row; col++)
-        {
             cout << "* ";
-        }
         row += 1;
         cout << endl;
     }
@@ -45,16 +42,6 @@ void printFlippedTriangle(int height) {
     
     */
     // FIXME3 ...
-       int row = 1;
-    // row
-    while (row <= height) 
-    {
-        // column
-        for(int col = height; col >= row ; col-- )
-            cout << "* ";
-            row += 1;
-            cout << endl;
-    }
 }
 
 
@@ -71,18 +58,6 @@ Square of height 5, e.g., would look like the following.
 *  *  *  *  *   
 
 */
-void printSquare(int height) {
-    //Function takes height as an argument to print the triangle
-    //of that height with *
-    int row = 5;
-    // row
-    while (row <= height) {
-        // column
-        for(int col = 5; col<=row; col++)
-            cout << "* ";
-        cout << endl;
-    }
-}
 
 // function clears the screen system call
 // NOTE: system call is not a security best pracice!
@@ -95,27 +70,12 @@ void clearScreen() {
     #endif
 }
 
-int main(int argc, char* argv[]) 
-{
+int main(int argc, char* argv[]) {
     // FIXME5 add a loop to make the program to continue to run until the user wants to quit
-     while(true) 
-     {
-        cout << "Do you want to continue? (y/n): ";
-        string answer;
-        cin >> answer;
-        if(answer == "no") 
-        {
-            break;
-        }
-    }
-   
     // FIXME6 call clearScreen function to clear the screen for each round of the loop
-    
-    clearScreen();
     int height;
     cout << "Program prints geometric shapes of given height with *\n";
     cout << "Please enter the height of the shape: ";
-    int height;
     cin >> height;
     // call printTriangle function passing user entered height
     printTriangle(height);
