@@ -1,18 +1,37 @@
 #include <iostream>
-using namespace std;
+  #include <fstream>
+  using namespace std;
+  
+  int main()
+  {
 
-int main()
-{
-    //step 1: Read in radius
-    double radius;
-    cout << "Enter a radius:";
-    cin >> radius;
+    ofstream output("scores.txt");
 
-    //Step 2: Compute area
-    double area = radius * radius * 3.14159;
+    output << "John" << " " << "T" << " " << "Smith"
+      << " " << 90 << endl;
+    output << "Eric" << " " << "K" << " " << "Jones"
+      << " " << 85;
+  
+    output.close();
+  
+    ifstream input;
 
-    //Step 3: Dsipalay the area
-    cout << "The area is " << area << endl;
-
+    input.open("scores.txt");
+  
+ 
+    char firstName[80];
+    char mi;
+    char lastName[80];
+    int score;
+    input >> firstName >> mi >> lastName >> score;
+    double sum = score;
+  
+    input >> firstName >> mi >> lastName >> score;
+    sum += score;
+  
+    cout << "Total score is " << sum << endl;
+  
+    input.close();
+  
     return 0;
-}
+  }
