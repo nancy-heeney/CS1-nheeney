@@ -14,6 +14,9 @@ Distance in meters and feet (printed to 1 decimal place)
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include <fstream>
+
+using namespace std;
 
 #ifndef M_PI
 #define M_PI 3.14159
@@ -96,20 +99,59 @@ int main() {
                 if (y < 0) break;
 
             }  // End while
-        std::cout << "The maximum height of the projectile is " << max_height << "!" << std::endl;
+        std::cout << "The maximum height of the projectile is " << std::fixed << std::setprecision(2) << max_height << "!" << std::endl;
         std::cout << std::endl;
-        std::cout << "The distance traveled by the projectile is " << x << "!" << std::endl;
+        std::cout << "The distance traveled by the projectile is " << std::fixed << std::setprecision(2) << x << "!" << std::endl;
         std::cout << std::endl;
-        std::cout << "The time it took for the projectile to fall back to the ground is " << time << "!" << std::endl;
+        std::cout << "The time it took for the projectile to fall back to the ground is " << std::fixed << std::setprecision(1) << time << "!" << std::endl;
         std::cout << std::endl;
     }
     else if(choice == 2)
     {
-        x=1;
+        x=1
+        
     }
     else if(choice == 3)
     {
-        x=1;
+        const int MAX_ANGLE = 90;
+        const int MAX_VELOCITY = 15 * 30;
+
+        double calculateDistance(double angle, double velocity) 
+        {
+        double radian = angle * M_PI / 180.0;
+        double vx = velocity * cos(radian);
+        double vy = velocity * sin(radian);
+        double time = vy / 9.81; // assuming g = 9.81 m/s^2
+        double distance = vx * time;
+        return distance;
+        }
+
+        int main() 
+        {
+            std::vector<std::vector<double>> distanceArray(15, std::vector<double>(30));
+
+            for (int i = 0; i < 15; i++) 
+            {
+                for (int j = 0; j < 30; j++) 
+                {
+                    double angle = i * MAX_ANGLE / 15.0;
+                    double velocity = j * MAX_VELOCITY / 30.0;
+                    distanceArray[i][j] = calculateDistance(angle, velocity);
+                }
+             }
+
+            // print the array for demonstration
+            for (int i = 0; i < 15; i++) 
+            {
+                for (int j = 0; j < 30; j++) 
+                {
+                    std::cout << distanceArray[i][j] << "\t";
+                }
+                std::cout << std::endl;
+            }
+
+            return 0;
+        }
     }
     else
     {

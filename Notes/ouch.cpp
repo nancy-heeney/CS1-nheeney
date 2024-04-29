@@ -1,37 +1,37 @@
 #include <iostream>
-  #include <fstream>
-  using namespace std;
-  
-  int main()
-  {
+#include <cmath>
 
-    ofstream output("scores.txt");
+const int MAX_ANGLE = 90;
+const int MAX_VELOCITY = 100;
+const int ARRAY_DIM = 10;
 
-    output << "John" << " " << "T" << " " << "Smith"
-      << " " << 90 << endl;
-    output << "Eric" << " " << "K" << " " << "Jones"
-      << " " << 85;
-  
-    output.close();
-  
-    ifstream input;
+double distance(int angle, int velocity) {
+    double theta = angle * M_PI / 180.0; // convert angle from degrees to radians
+    double v = velocity * 1.0; // convert velocity from integer to double
+    return v * v * sin(2 * theta) / 9.8;
+}
 
-    input.open("scores.txt");
-  
- 
-    char firstName[80];
-    char mi;
-    char lastName[80];
-    int score;
-    input >> firstName >> mi >> lastName >> score;
-    double sum = score;
-  
-    input >> firstName >> mi >> lastName >> score;
-    sum += score;
-  
-    cout << "Total score is " << sum << endl;
-  
-    input.close();
-  
+int main() {
+    double distanceArray[ARRAY_DIM][ARRAY_DIM];
+
+    // Calculate distances for each combination of angle and velocity
+    for (int i = 0; i < ARRAY_DIM; i++) {
+        for (int j = 0; j < ARRAY_DIM; j++) {
+            int angle = i * MAX_ANGLE / ARRAY_DIM;
+            int velocity = j * MAX_VELOCITY / ARRAY_DIM;
+            distanceArray[i][j] = distance(angle, velocity);
+        }
+    }
+
+    // Output the table as a CSV file
+    FILE *csv_file = fopen("distances.csv", "w");
+    for (int i = 0; i < ARRAY_DIM; i++) {
+        for (int j = 0; j < ARRAY_DIM; j++) {
+            fprintf(csv_file, "%.2f,", distanceArray[i][j]);
+        }
+        fprintf(csv_file, "\n");
+    }
+    fclose(csv_file);
+
     return 0;
-  }
+}
