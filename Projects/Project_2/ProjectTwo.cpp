@@ -121,7 +121,59 @@ int main() {
         std::cout << "Give me the target distance please: " << std::endl;
         double target_distance;
         std::cin >> target_distance;
+
+        double *distances = new double[rows*columns];
+        double *speeds = new double[columns+1];
+        double *angles = new double[rows+1];
+        for(int i=0; i<=columns; i++) // Fill in speeds array
+        {
+            double speed_inc = max_velocity/columns;
+            *(speeds+i) = i*speed_inc;
+            fout << *(speeds+i) << ',';
+            std::cout << *(speeds+i) << ',';
+        }
+        fout << '\n';
+        std::cout << '\n';
+        for(int i=0; i<=rows; i++) // Fill in angles array
+        {
+            double angle_inc = 90.0/rows;
+            *(angles+i) = i*angle_inc;
+        }
+
+        //std::cout << distances << std::endl;
+
+        for(int i=0; i<rows; i++)
+        {
+            fout << *(angles + i+1) << ',';
+            std::cout << *(angles + i+1) << ',';
+            for(int j=0; j<columns; j++)
+            {
+                double val = *(distances + i*columns+j) = get_distance(angles[i+1], speeds[j+1]);
+                //double *address_of_current_val;
+                //address_current_val = distances;
+                std::cout << std::fixed << std::setprecision(2) << val << ',';
+                fout << std::fixed << std::setprecision(2) << val << ',';
+            }
+            std::cout << '\n';
+            fout << '\n';
         
+        }
+        std::cout << "\nI found these results for you: " << std::endl;
+        std::cout << "Your angle is: " << std::setw(15) << "Your speed is: " << std::setw(15) << "Your distance is: " << std::setw(15) << std::endl;
+        for(int i=0; i<rows;i++)
+        {
+            for(int j=0;j<columns; j++)
+            {
+                double val = *(distances + i*columns + j);
+                if(fabs(val-target_distance) <= 0.05)
+                {
+                    std::cout << std::setw(1) << angles[i+1]<< std::setw(15) << speeds[j+1] << std::setw(14) << val << std::endl;
+                }
+            }
+        }
+
+        delete [] distances;
+        fout.close();
         
     }
     else if(choice == 3)
@@ -129,52 +181,58 @@ int main() {
         std::ofstream fout;
 
         fout.open("formatedtable.txt");
+
+        int rows = 15;
+        int columns = 30;
+        std::cout << "Give me the maximum velocity please: " << std::endl;
+        double max_velocity;
+        std::cin >> max_velocity;
+
+        double *distances = new double[rows*columns];
+        double *speeds = new double[columns+1];
+        double *angles = new double[rows+1];
+        for(int i=0; i<=columns; i++) // Fill in speeds array
+        {
+            double speed_inc = max_velocity/columns;
+            *(speeds+i) = i*speed_inc;
+            fout << *(speeds+i) << std::fixed << std::setprecision(2) << std::setw(10);
+            std::cout << *(speeds+i) << std::fixed << std::setprecision(2) << std::setw(10);
+        }
+        fout << '\n';
+        std::cout << '\n';
+        for(int i=0; i<=rows; i++) // Fill in angles array
+        {
+            double angle_inc = 90.0/rows;
+            *(angles+i) = i*angle_inc;
+        }
+
+        //std::cout << distances << std::endl;
+
+        for(int i=0; i<rows; i++)
+        {
+            fout << *(angles + i+1) << ',';
+            std::cout << *(angles + i+1) << ',';
+            for(int j=0; j<columns; j++)
+            {
+                double val = *(distances + i*columns+j) = get_distance(angles[i+1], speeds[j+1]);
+                //double *address_of_current_val;
+                //address_current_val = distances;
+                std::cout << std::fixed << std::setprecision(2) << val << std::setw(8);
+                fout << std::fixed << std::setprecision(2) << val << std::setw(8);
+            }
+            std::cout << '\n';
+            fout << '\n';
+        }
+        fout.close();
+
     }
+
     else
     {
         std::cout << "You're stupid, try again!" << std::endl;
     }
 
-    // Simulation loop
-    /*while (y >= 0) 
-    {
-        // Update position
-        x += vx * dt;
-        y += vy * dt;
+    
 
-        // Calculate acceleration due to air resistance
-        airResistance(vx, vy, ax, ay);
-        //ax = 0;  // make air resistance zero
-        //ay = 0;  // make air resistance zero
-
-        // Update velocity
-        vx += ax * dt;
-        vy += (ay - g) * dt; // Include gravity
-
-        // Output the current position
-        std::cout << "Position: (" << x << ", " << y << ")" << ", Time: " << time << std::endl;
-        
-        //Or plot an asterisk
-        step_num++;
-        if(step_num%2 == 0)
-        {
-            std::cout << std::setw((int)(y*50/37.0)) << '*' 
-            << std::setw(5) << std::fixed << std::setprecision(1) 
-            << y << std::endl;
-        } 
-
-        time += dt;
-        if(y > max_height)
-        {
-            max_height = y;
-        }
-
-        // Break if the projectile hits the ground
-        if (y < 0) break;
-
-    }  // End while 
-    */
-    // std::cout << "Max height: " << max_height << std::endl;
-    // std::cout << area << std::endl;
     return 0;
 }
