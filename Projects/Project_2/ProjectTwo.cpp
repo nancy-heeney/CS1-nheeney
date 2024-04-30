@@ -210,8 +210,8 @@ int main() {
 
         for(int i=0; i<rows; i++)
         {
-            fout << *(angles + i+1) << ',';
-            std::cout << *(angles + i+1) << ',';
+            fout << *(angles + i+1) << std::fixed << std::setprecision(2) << std::setw(2);
+            std::cout << *(angles + i+1) << std::setw(8);
             for(int j=0; j<columns; j++)
             {
                 double val = *(distances + i*columns+j) = get_distance(angles[i+1], speeds[j+1]);
