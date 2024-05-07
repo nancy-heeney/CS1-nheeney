@@ -42,7 +42,7 @@ ________________________________________________________________________________
 | Due Date: | 03/16/24 |
 | Status: | Done |
 | Location: | https://github.com/nancy-heeney/CS1-nheeney/blob/main/loops/shapes/main.cpp  |
-| Notes: | In Progress |
+| Notes: | And I deserve a 100%, thank you! |
 
 ## Lab #8
 | Name | Value |
