@@ -51,7 +51,7 @@ ________________________________________________________________________________
 | Description: | "Array" |
 | Due Date: | 04/08/24 |
 | Status: | In Progress |
-| Location: |   |
+| Location: | https://github.com/nancy-heeney/CS1-nheeney/blob/main/Assignments/Labs/array.cpp  |
 | Notes: | In Progress |
 
 
@@ -76,7 +76,7 @@ ________________________________________________________________________________
 | Description: | "CS111 Project 2" |
 | Due Date: | 04/16/24 |
 | Status: | Done|
-| Location: | |
+| Location: | https://github.com/nancy-heeney/CS1-nheeney/blob/main/Projects/Project_2/ProjectTwo.cpp |
 | Notes: | Done and I deserve a 100% |
 
 ## Final Project
