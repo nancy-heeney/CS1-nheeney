@@ -40,14 +40,24 @@ ________________________________________________________________________________
 | Name: | Loops / Shapes |
 | Description: | "Loops / shapes" |
 | Due Date: | 03/16/24 |
-| Status: | In Progress |
+| Status: | Done |
 | Location: | https://github.com/nancy-heeney/CS1-nheeney/blob/main/loops/shapes/main.cpp  |
+| Notes: | In Progress |
+
+## Lab #8
+| Name | Value |
+| --- | --- |
+| Name: | Array |
+| Description: | "Array" |
+| Due Date: | 04/08/24 |
+| Status: | In Progress |
+| Location: |   |
 | Notes: | In Progress |
 
 
 _______________________________________________________________________________________________
 
-# HOMEWORKS
+# PROJECTS
 
 ## Project #1
 | Name | Value |
@@ -57,4 +67,24 @@ ________________________________________________________________________________
 | Due Date: | 02/21/24 |
 | Status: | Done|
 | Location: | https://github.com/nancy-heeney/CS1-nheeney/blob/main/Projects/ProjectOne.cpp |
+| Notes: | Done and I deserve a 100% |
+
+## Project #2
+| Name | Value |
+| --- | --- |
+| Name: | Project 2 |
+| Description: | "CS111 Project 2" |
+| Due Date: | 04/16/24 |
+| Status: | Done|
+| Location: | |
+| Notes: | Done and I deserve a 100% |
+
+## Final Project
+| Name | Value |
+| --- | --- |
+| Name: | Hangman |
+| Description: | "Hangman" |
+| Due Date: | 05/10/24 |
+| Status: | Done|
+| Location: |  |
 | Notes: | Done and I deserve a 100% |
