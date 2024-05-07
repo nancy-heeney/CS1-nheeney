@@ -50,9 +50,9 @@ ________________________________________________________________________________
 | Name: | Array |
 | Description: | "Array" |
 | Due Date: | 04/08/24 |
-| Status: | In Progress |
+| Status: | Done |
 | Location: | https://github.com/nancy-heeney/CS1-nheeney/blob/main/Assignments/Labs/array.cpp  |
-| Notes: | In Progress |
+| Notes: | Done and I deserve a 100% |
 
 
 _______________________________________________________________________________________________
@@ -86,5 +86,5 @@ ________________________________________________________________________________
 | Description: | "Hangman" |
 | Due Date: | 05/10/24 |
 | Status: | Done|
-| Location: |  |
+| Location: | https://github.com/nancy-heeney/CS1-nheeney/blob/main/Final_Project/final_project.cpp |
 | Notes: | Done and I deserve a 100% |
