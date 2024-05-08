@@ -51,7 +51,7 @@ ________________________________________________________________________________
 | Description: | "Array" |
 | Due Date: | 04/08/24 |
 | Status: | Done |
-| Location: | https://github.com/nancy-heeney/CS1-nheeney/blob/main/Assignments/Labs/array.cpp  |
+| Location: | https://github.com/nancy-heeney/CS1-nheeney/blob/main/Assignments/Labs/array/numbers/main.cpp |
 | Notes: | Done and I deserve a 100% |
 
 
