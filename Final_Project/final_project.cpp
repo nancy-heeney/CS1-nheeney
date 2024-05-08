@@ -9,6 +9,8 @@ using namespace std;
 const int NUM_WORDS = 20;
 const int MAX_GUESSES = 6;
 
+void drawHangman(int incorrectGuesses);
+
 string words[NUM_WORDS] = {
     "apple", "banana", "cherry", "date", "elderberry",
     "fig", "grape", "honeydew", "ice cream", "jackfruit",
@@ -18,11 +20,13 @@ string words[NUM_WORDS] = {
 
 string chooseRandomWord() {
     srand(time(0));
-    return words[rand() % NUM_WORDS];
-}
+    return words[rand() % NUM_WORDS];       //function returns a random word from the words array
+}                                           //This function ensures a different word is chosen each time it is called
 
 void playHangman() {
-    string word = chooseRandomWord();
+
+
+    string word = chooseRandomWord();   //This line declares a string variable named word and assigns it a random word from a dictionary
     int wordLength = word.length();
     char guessedWord[wordLength + 1];
     for (int i = 0; i < wordLength; i++) {
@@ -34,6 +38,8 @@ void playHangman() {
     char guess;
 
     while (guessesRemaining > 0) {
+        drawHangman(guessesRemaining);
+
         cout << "\nGive me a letter stupid: ";
         cin >> guess;
 
