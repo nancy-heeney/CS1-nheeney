@@ -54,6 +54,17 @@ ________________________________________________________________________________
 | Location: | https://github.com/nancy-heeney/CS1-nheeney/blob/main/Assignments/Labs/array/numbers/main.cpp |
 | Notes: | Done and I deserve a 100% |
 
+## Lab #10a
+| Name | Value |
+| --- | --- |
+| Name: | FileIO |
+| Description: | "FileIO" |
+| Due Date: | 04/26/24 |
+| Status: | Done |
+| Location: |  |
+| Notes: | Done and I deserve a 100% |
+
+
 
 _______________________________________________________________________________________________
 
