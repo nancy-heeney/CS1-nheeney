@@ -1,4 +1,4 @@
-# compiler name
+# compiler name Nancy Heeney
 CXX = g++
 # g++ compiler flags
 # -g: adds debugging information to the executable file
@@ -8,10 +8,10 @@ CXX = g++
 CXXFLAGS = -c -g -Wall -std=c++17
 
 # the build target executable file; .exe is not required
-PROGRAM = #FIXME
+PROGRAM = main.exe
 
 # list .cpp files separated by space
-CPPFILES = #FIXME
+CPPFILES = main.cpp
 
 # make all rule/default rule that'll be run when we run "make"
 # first compile each file to object file
@@ -27,6 +27,8 @@ clean:
 
 # FIXME
 # add a rule to run the program
+run:
+	./$(PROGRAM)
 
 all: build unittest clean
 	@printf "All done!\n"
